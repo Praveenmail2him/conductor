@@ -185,8 +185,10 @@ public class SubWorkflow extends WorkflowSystemTask {
 				task.setStatus(Status.COMPLETED);
 				break;
 			case FAILED:
-			case TERMINATED:
 				task.setStatus(Status.FAILED);
+				break;
+			case TERMINATED:
+				task.setStatus(Status.CANCELED);
 				break;
 			case TIMED_OUT:
 				task.setStatus(Status.TIMED_OUT);
